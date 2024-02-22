@@ -1,13 +1,13 @@
-import { GetStaticPathsResult, GetStaticPropsResult } from "next"
-import Head from "next/head"
-import { DrupalNode } from "next-drupal"
+import { GetStaticPathsResult, GetStaticPropsResult } from 'next'
+import Head from 'next/head'
+import { DrupalNode } from 'next-drupal'
 
-import { drupal } from "lib/drupal"
-import { NodeArticle } from "components/node--article"
-import { NodeBasicPage } from "components/node--basic-page"
-import { Layout } from "components/layout"
+import { drupal } from 'lib/drupal'
+import { NodeArticle } from 'components/node--article'
+import { NodeBasicPage } from 'components/node--basic-page'
+import { Layout } from 'components/layout'
 
-const RESOURCE_TYPES = ["node--page", "node--article"]
+const RESOURCE_TYPES = ['node--page', 'node--article']
 
 interface NodePageProps {
   resource: DrupalNode
@@ -22,8 +22,11 @@ export default function NodePage({ resource }: NodePageProps) {
         <title>{resource.title}</title>
         <meta name="description" content="A Next.js site powered by Drupal." />
       </Head>
-      {resource.type === "node--page" && <NodeBasicPage node={resource} />}
-      {resource.type === "node--article" && <NodeArticle node={resource} />}
+      {resource.type === 'node--page' && <NodeBasicPage node={resource} />}
+      {resource.type === 'node--article' && <NodeArticle node={resource} />}
+      {resource.type === 'node--testimonials' && (
+        <NodeArticle node={resource} />
+      )}
     </Layout>
   )
 }
@@ -31,12 +34,12 @@ export default function NodePage({ resource }: NodePageProps) {
 export async function getStaticPaths(context): Promise<GetStaticPathsResult> {
   return {
     paths: await drupal.getStaticPathsFromContext(RESOURCE_TYPES, context),
-    fallback: "blocking",
+    fallback: 'blocking',
   }
 }
 
 export async function getStaticProps(
-  context
+  context,
 ): Promise<GetStaticPropsResult<NodePageProps>> {
   const path = await drupal.translatePathFromContext(context)
 
@@ -49,9 +52,9 @@ export async function getStaticProps(
   const type = path.jsonapi.resourceName
 
   let params = {}
-  if (type === "node--article") {
+  if (type === 'node--testimonials') {
     params = {
-      include: "field_image,uid",
+      include: 'field_image,uid',
     }
   }
 
@@ -60,7 +63,7 @@ export async function getStaticProps(
     context,
     {
       params,
-    }
+    },
   )
 
   // At this point, we know the path exists and it points to a resource.

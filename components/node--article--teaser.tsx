@@ -10,7 +10,7 @@ interface NodeArticleTeaserProps {
 
 export function NodeArticleTeaser({ node, ...props }: NodeArticleTeaserProps) {
   return (
-    <li {...props}>
+    <li className="hover:border-2 hover:border-[#eda029] p-4" {...props}>
       <div className="items-center gap-x-6">
         <Link href={node?.path?.alias}>
           {node.field_image && (
@@ -27,13 +27,13 @@ export function NodeArticleTeaser({ node, ...props }: NodeArticleTeaserProps) {
         </Link>
         <div>
           <Link href={node?.path?.alias}>
-            <h3 className="text-2xl font-semibold leading-7 tracking-tight text-gray-900">
+            <h3 className="text-2xl text-white font-semibold leading-7 tracking-tight text-gray-900">
               {node.title}
             </h3>
           </Link>
           <Link
             href={node?.path?.alias}
-            className="inline-flex items-center px-6 py-2 mt-4 border border-gray-600 rounded-full hover:bg-gray-100"
+            className="inline-flex items-center p-4 mt-4 rounded-full bg-[#eda029] text-white p-4 hover:bg-[#2d3d76]"
           >
             Read Testimonial
             <svg

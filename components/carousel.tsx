@@ -35,18 +35,14 @@ const slideImages = [
 
 export const Slideshow = () => {
   return (
-    <div className="slide-container">
-      <Slide>
-        {slideImages.map((slideImage, index) => (
-          <div key={index}>
-            <div
-              style={{ ...divStyle, backgroundImage: `url(${slideImage.url})` }}
-            >
-              <span style={spanStyle}>{slideImage.caption}</span>
-            </div>
-          </div>
-        ))}
-      </Slide>
+    <div
+      className="mx-auto overflow-y-scroll bg-cover bg-fixed bg-center bg-no-repeat shadow-lg"
+      style={{
+        backgroundImage:
+          "url('https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp');",
+      }}
+    >
+      <div className="mt-40"></div>
     </div>
   )
 }

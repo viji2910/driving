@@ -15,7 +15,7 @@ export const Navigation = () => {
         <Link
           className={`link ${
             pathname === '/' ? 'active' : ''
-          } text-4xl leading-6 p-3 text-gray-900 `}
+          } text-2xl leading-6 p-3 text-gray-900 `}
           href="/"
         >
           Home
@@ -23,7 +23,7 @@ export const Navigation = () => {
         <Link
           className={`link ${
             pathname === '/about' ? 'active' : ''
-          } text-4xl leading-6 p-3 text-gray-900 `}
+          } text-2xl leading-6 p-3 text-gray-900 `}
           href="/about"
         >
           About
@@ -31,7 +31,7 @@ export const Navigation = () => {
         <Link
           className={`link ${
             pathname === '/testimonials' ? 'active' : ''
-          } text-4xl leading-6 p-3 text-gray-900 `}
+          } text-2xl leading-6 p-3 text-gray-900 `}
           href="/testimonials"
         >
           Testimonials
@@ -39,7 +39,7 @@ export const Navigation = () => {
         <Link
           className={`link ${
             pathname === '/contact' ? 'active' : ''
-          } text-4xl leading-6 p-3 text-gray-900 `}
+          } text-2xl leading-6 p-3 text-gray-900 `}
           href="/contact"
         >
           Services

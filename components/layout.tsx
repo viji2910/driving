@@ -7,7 +7,7 @@ export function Layout({ children }) {
     <>
       <PreviewAlert />
       <div className="mx-auto bg-[#f2f1ee]">
-        <header>
+        <header className="sticky top-0 z-40 bg-[#f2f1ee]">
           <div className="container flex items-center justify-between py-6 mx-auto">
             <Navigation />
             <button className="rounded-full ... bg-[#eda029] text-white p-4 w-40">

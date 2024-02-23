@@ -10,17 +10,20 @@ interface NodeArticleTeaserProps {
 
 export function NodeArticleTeaser({ node, ...props }: NodeArticleTeaserProps) {
   return (
-    <li className="hover:border-2 hover:border-[#eda029] p-4" {...props}>
+    <div
+      className="hover:border-2 rounded-lg text-center bg-[#1F2937] hover:border-[#eda029] p-4"
+      {...props}
+    >
       <div className="items-center gap-x-6">
         <Link href={node?.path?.alias}>
           {node.field_image && (
-            <figure className="my-4 rounded">
+            <figure className="my-4 text-center">
               <Image
                 src={absoluteUrl(node.field_image.uri.url)}
-                width={768}
+                width={400}
                 alt={node.field_image.resourceIdObjMeta.alt}
                 height={400}
-                className="rounded"
+                className="rounded-full w-64 h-64 mx-auto"
               />
             </figure>
           )}
@@ -50,7 +53,7 @@ export function NodeArticleTeaser({ node, ...props }: NodeArticleTeaserProps) {
           </Link>
         </div>
       </div>
-    </li>
+    </div>
   )
 }
 

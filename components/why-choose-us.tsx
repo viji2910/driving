@@ -13,7 +13,7 @@ export const WhyChooseUs = () => {
         <div>
           <h3 className="text-2xl my-4">Expert Driving Instructios</h3>
           <p className="text-gray-500 text-justify">
-            At Behind the wheel, our team's deep-rooted expertise in driving
+            At Behind the wheel, our {"team's"} deep-rooted expertise in driving
             that resonate with both exam preparation and safe skills, ensuring
             every lesson serves a purpose.
           </p>
@@ -21,9 +21,9 @@ export const WhyChooseUs = () => {
         <div>
           <h3 className="text-2xl my-4">End-to-End Commitment</h3>
           <p className="text-gray-500 text-justify">
-            From first lesson to the last, Behind The Wheel's commitment ensures
-            your driving skills are nurtured through every stage, resulting in a
-            best driving experience nothing short of exceptional.
+            From first lesson to the last, Behind The {"Wheel's"} commitment
+            ensures your driving skills are nurtured through every stage,
+            resulting in a best driving experience nothing short of exceptional.
           </p>
         </div>
         <div>
@@ -44,5 +44,5 @@ export const WhyChooseUs = () => {
         </button>
       </div>
     </div>
-  )
-}
+  );
+};

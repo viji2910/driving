@@ -16,30 +16,28 @@ export default function services() {
       <h2 className="text-3xl my-4">Why Choose Us:</h2>
       <h3 className="text-2xl my-4">Dual Instruction Services:</h3>
       <p>
-        {" "}
-        Whether you're a new driver seeking a Class 7 learner's license or
-        working towards your Class 5 full license, we've got you covered. Our
-        dual services cater to learners at every stage of their driving journey.
+        {
+          " Whether you're a new driver seeking a Class 7 learner's license or working towards your Class 5 full license, we've got you covered. Our dual services cater to learners at every stage of their driving journey."
+        }
       </p>
-      <h3 className="text-2xl my-4">Certified Instructors:</h3>{" "}
+      <h3 className="text-2xl my-4">Certified Instructors:</h3>
       <p>
-        Our team comprises certified instructors with years of experience and a
-        passion for teaching. Rest assured, you're in capable hands as you learn
-        the rules of the road and develop essential driving skills.
+        {
+          "Our team comprises certified instructors with years of experience and a passion for teaching. Rest assured, you're in capable hands as you learn the rules of the road and develop essential driving skills."
+        }
       </p>
       <h3 className="text-2xl my-4">Flexible Lesson Plans:</h3>
       <p>
-        {" "}
         Life can be unpredictable, and we understand that. Our flexible lesson
         plans accommodate your schedule, offering lessons during evenings,
         weekends, or weekdays. Choose what works best for you!
       </p>
       <h3 className="text-2xl my-4">Customized Learning Paths:</h3>
       <p>
-        {" "}
         No two learners are alike. We take pride in crafting personalized
         learning paths tailored to your unique needs and pace. From mastering
-        basic maneuvers to navigating complex intersections, we ensure you're
+        basic maneuvers to navigating complex intersections, we ensure{" "}
+        {"you're"}
         well-prepared for success.
       </p>
       <h3 className="text-2xl my-4">Local Expertise:</h3>
@@ -59,7 +57,7 @@ export default function services() {
       </p>
       <h3 className="text-2xl my-4">Affordable Packages:</h3>{" "}
       <p>
-        Quality instruction shouldn't break the bank. Explore our affordable
+        Quality instruction {"shouldn't"} break the bank. Explore our affordable
         packages, making it accessible for everyone to embark on their journey
         towards becoming a skilled and responsible driver.
       </p>

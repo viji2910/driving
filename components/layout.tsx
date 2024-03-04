@@ -1,10 +1,15 @@
-import { Navigation } from 'components/navigation'
-import { PreviewAlert } from 'components/preview-alert'
-import { Footer } from 'components/footer'
+import { Navigation } from "components/navigation";
+import { PreviewAlert } from "components/preview-alert";
+import { Footer } from "components/footer";
+import Head from "next/head";
 
 export function Layout({ children }) {
   return (
     <>
+      <Head>
+        <title>Vijinder Singh Boparai driving school</title>
+        <meta name="description" content="A Next.js site powered by Drupal." />
+      </Head>
       <PreviewAlert />
       <div className="mx-auto">
         <header className="sticky top-0 z-40 bg-[#F2F1EE]">
@@ -25,5 +30,5 @@ export function Layout({ children }) {
         </footer>
       </div>
     </>
-  )
+  );
 }

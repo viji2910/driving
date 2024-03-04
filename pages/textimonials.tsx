@@ -3,28 +3,24 @@ import { GetStaticPropsResult } from "next";
 import { DrupalNode } from "next-drupal";
 import { drupal } from "lib/drupal";
 import { Layout } from "components/layout";
-import { WhyChooseUs } from "components/why-choose-us";
-import { HomeHeader } from "components/home-header";
 import { Testimonials } from "components/testimonials";
 
-interface IndexPageProps {
+interface TestimonialsPageProps {
   nodes: DrupalNode[];
 }
 
-export default function IndexPage({ nodes }: IndexPageProps) {
+export default function TestimonialsPage({ nodes }: TestimonialsPageProps) {
   return (
     <Layout>
       <Head>
-        <title>Vijinder Singh Boparai Driving School</title>
+        <title>Vijinder Singh Boparai Driving School | Testimonials</title>
         <meta
           name="description"
           content="A Next.js site powered by a Drupal backend."
         />
       </Head>
       <div>
-        <HomeHeader />
         <Testimonials nodes={nodes} />
-        <WhyChooseUs />
       </div>
     </Layout>
   );
@@ -32,7 +28,7 @@ export default function IndexPage({ nodes }: IndexPageProps) {
 
 export async function getStaticProps(
   context
-): Promise<GetStaticPropsResult<IndexPageProps>> {
+): Promise<GetStaticPropsResult<TestimonialsPageProps>> {
   const nodes = await drupal.getResourceCollectionFromContext<DrupalNode[]>(
     "node--testimonials",
     context,

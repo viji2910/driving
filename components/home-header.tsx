@@ -1,7 +1,7 @@
 export const HomeHeader = () => {
   return (
-    <div className="mb-6">
-      <h1 className="text-8xl mb-16">
+    <div className="mb-6 px-4 md:px-0">
+      <h1 className="text-6xl mb-16">
         Dynamic Driving Instructors
         <br />
         Forging a New Path Forward
@@ -19,5 +19,5 @@ export const HomeHeader = () => {
         </button>
       </div>
     </div>
-  )
-}
+  );
+};

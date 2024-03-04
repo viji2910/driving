@@ -3,7 +3,7 @@ import { GetStaticPropsResult } from "next";
 import { DrupalNode } from "next-drupal";
 import { drupal } from "lib/drupal";
 import { Layout } from "components/layout";
-import { Testimonials } from "components/testimonials";
+import { NodeArticleTeaser } from "components/node--article--teaser";
 
 interface TestimonialsPageProps {
   nodes: DrupalNode[];
@@ -20,7 +20,20 @@ export default function TestimonialsPage({ nodes }: TestimonialsPageProps) {
         />
       </Head>
       <div>
-        <Testimonials nodes={nodes} />
+        <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8">
+          <div
+            role="list"
+            className="grid grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-3 sm:gap-y-16"
+          >
+            {nodes?.length ? (
+              nodes?.map((node) => (
+                <NodeArticleTeaser key={node.id} node={node} />
+              ))
+            ) : (
+              <p className="py-4">No nodes found</p>
+            )}
+          </div>
+        </div>
       </div>
     </Layout>
   );

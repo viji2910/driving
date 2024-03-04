@@ -14,7 +14,7 @@ export const Navigation = () => {
         className="mx-auto flex max-w-7xl items-center justify-between lg:px-8"
         aria-label="Global"
       >
-        <section className="MOBILE-MENU flex lg:hidden">
+        <section className="MOBILE-MENU flex flex-col lg:hidden">
           <div
             className="HAMBURGER-ICON space-y-2"
             onClick={() => setIsNavOpen((prev) => !prev)} // toggle isNavOpen state on click
@@ -42,7 +42,7 @@ export const Navigation = () => {
                 <line x1="6" y1="6" x2="18" y2="18" />
               </svg>
             </div>
-            <div className="flex lg:flex-1">
+            <div className="flex flex-col lg:flex-1">
               <Link
                 className={`link ${
                   pathname === "/" ? "active" : ""

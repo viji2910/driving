@@ -20,8 +20,8 @@ export function Layout({ children }) {
             </button>
           </div>
         </header>
-        <main className="bg-[#f2f1ee] pt-16">
-          <div className="container mx-auto ">{children}</div>
+        <main className="bg-[#f2f1ee] py-16">
+          <div className="lg:container mx-auto">{children}</div>
         </main>
         <footer className="bg-black">
           <div className="container mx-auto">

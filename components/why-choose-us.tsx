@@ -1,3 +1,4 @@
+import { redirect } from "next/navigation";
 export const WhyChooseUs = () => {
   return (
     <div className="p-6">
@@ -39,7 +40,10 @@ export const WhyChooseUs = () => {
         <button className="rounded-full text-2xl hover:bg-[#2d3d76] bg-[#eda029] text-white py-5 px-8">
           Get In Touch
         </button>
-        <button className="ml-6 rounded-full text-2xl hover:bg-[#2d3d76] hover:text-white bg-gray-100 border text-black border-gray-950 hover:text-white py-5 px-8">
+        <button
+          onClick={() => redirect("/prices")}
+          className="ml-6 rounded-full text-2xl hover:bg-[#2d3d76] hover:text-white bg-gray-100 border text-black border-gray-950 hover:text-white py-5 px-8"
+        >
           Browse Prices
         </button>
       </div>
